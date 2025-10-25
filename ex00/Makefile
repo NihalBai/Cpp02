@@ -6,7 +6,7 @@
 #    By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/25 09:57:56 by nbaidaou          #+#    #+#              #
-#    Updated: 2025/10/25 09:58:31 by nbaidaou         ###   ########.fr        #
+#    Updated: 2025/10/25 14:17:18 by nbaidaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = Fixed.cpp  main.cpp 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = zombie
+NAME = out
 
 all : $(NAME)
 

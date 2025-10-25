@@ -6,13 +6,13 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 11:20:19 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/10/25 12:04:37 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/10/25 13:59:15 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Fixed.hpp"
 
-Fixed::Fixed():in(0)
+Fixed:: Fixed(): in(0)
 {
     std::cout << "Default constructor called\n";
 }
@@ -27,8 +27,8 @@ Fixed ::Fixed(const Fixed &f){
    *this = f;
 }
 
-Fixed::&Fixed operator=(const Fixed &f){
-    std::cot << "Copy assignment operator called\n";
+Fixed &Fixed::operator=(const Fixed &f){
+    std::cout << "Copy assignment operator called\n";
     if(this != &f)
        this->in = f.in;
     return *this;
