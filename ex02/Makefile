@@ -6,7 +6,7 @@
 #    By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/25 14:18:08 by nbaidaou          #+#    #+#              #
-#    Updated: 2025/10/25 14:18:11 by nbaidaou         ###   ########.fr        #
+#    Updated: 2025/10/25 14:47:05 by nbaidaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ $(NAME) : $(OBJ)
 	$(CPP) $(CFLAGS) -o $@ $^
 
 %.o: %.cpp  Fixed.hpp 
-	$(CXX) $(CXXFLAGS) -c $<  -o $@
+	$(CPP) $(CFLAGS) -c $<  -o $@
 
 clean:
 	rm -f $(OBJ)

@@ -6,7 +6,7 @@
 #    By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/25 14:18:17 by nbaidaou          #+#    #+#              #
-#    Updated: 2025/10/25 14:18:29 by nbaidaou         ###   ########.fr        #
+#    Updated: 2025/10/25 14:46:00 by nbaidaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@
 CPP = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = Fixed.cpp  main.cpp 
+SRC = Fixed.cpp  main.cpp bsp.cpp Point.cpp 
 OBJ = $(SRC:.cpp=.o)
 
 NAME = out
@@ -35,8 +35,8 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	$(CPP) $(CFLAGS) -o $@ $^
 
-%.o: %.cpp  Fixed.hpp 
-	$(CXX) $(CXXFLAGS) -c $<  -o $@
+%.o: %.cpp  Fixed.hpp Point.hpp
+	$(CPP) $(CFLAGS) -c $<  -o $@
 
 clean:
 	rm -f $(OBJ)
