@@ -6,7 +6,7 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 09:29:07 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/11/05 18:45:55 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/05 20:52:10 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ Fixed::Fixed(const Fixed &other)
 
 Fixed::Fixed(const int val)
 {
-    this->in = val << fract;
+    in = val << fract;
 }
 
 Fixed::Fixed(const float val)
 {
-    this->in = static_cast<int>(roundf(val * (1 << fract)));
+    in = static_cast<int>(roundf(val * (1 << fract)));
 }
 
 Fixed::~Fixed() {}
