@@ -6,11 +6,13 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 09:29:07 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/11/04 09:51:07 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:45:55 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <cstdlib>
+#include <iostream>
 
 Fixed::Fixed() : in(0) {}
 
@@ -72,6 +74,12 @@ Fixed Fixed::operator*(Fixed const &other) const
 Fixed Fixed::operator/(Fixed const &other) const
 {
     Fixed result;
+    // guard against division by zero in the raw fixed representation
+    if (other.in == 0)
+    {
+        std::cerr << "Error: Division by zero in Fixed::operator/()" << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
     long tmp = (static_cast<long>(this->in) << fract) / static_cast<long>(other.in);
     result.in = static_cast<int>(tmp);
     return result;

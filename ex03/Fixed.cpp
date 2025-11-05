@@ -6,11 +6,13 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:04:01 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/11/04 10:19:20 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/05 18:46:18 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Fixed.hpp"
+#include <cstdlib>
+#include <iostream>
 
 
 Fixed::Fixed() : in(0) {}
