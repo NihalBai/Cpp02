@@ -6,11 +6,10 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:20:00 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/11/04 10:17:07 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:29:47 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Point.hpp"
 
 int main()

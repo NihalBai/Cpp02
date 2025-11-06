@@ -6,7 +6,7 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 14:23:32 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/10/25 14:38:34 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:12:55 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,9 @@ Fixed::Fixed(const float f) : in(roundf(f * (1 << fract)))
     std::cout << "Float constructor called\n";
 }
 
-Fixed::Fixed(const Fixed &f)
+Fixed::Fixed(const Fixed &f) : in(f.in)
 {
     std::cout << "Copy constructor called\n";
-    this->in = f.in;
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
@@ -60,3 +59,4 @@ std::ostream &operator<<(std::ostream &os, const Fixed &f)
     os << f.toFloat();
     return os;
 }
+

@@ -6,7 +6,7 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 14:20:13 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/10/25 14:38:21 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:45:10 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,9 @@ public:
     ~Fixed();
     float toFloat( void ) const;
     int toInt( void ) const;
-    
-    // stream insertion operator
-    friend std::ostream &operator<<(std::ostream &os, const Fixed &f);
+
 };
 
+std::ostream &operator<<(std::ostream &os, const Fixed &f);
 
 #endif

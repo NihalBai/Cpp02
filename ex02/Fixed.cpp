@@ -6,13 +6,11 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 09:29:07 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/11/05 20:52:10 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:20:21 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <cstdlib>
-#include <iostream>
 
 Fixed::Fixed() : in(0) {}
 
@@ -74,7 +72,6 @@ Fixed Fixed::operator*(Fixed const &other) const
 Fixed Fixed::operator/(Fixed const &other) const
 {
     Fixed result;
-    // guard against division by zero in the raw fixed representation
     if (other.in == 0)
     {
         std::cerr << "Error: Division by zero in Fixed::operator/()" << std::endl;
@@ -86,26 +83,26 @@ Fixed Fixed::operator/(Fixed const &other) const
 }
 
 // increments / decrements
-Fixed &Fixed::operator++() // prefix
+Fixed &Fixed::operator++() 
 {
     ++this->in;
     return *this;
 }
 
-Fixed Fixed::operator++(int) // postfix
+Fixed Fixed::operator++(int) 
 {
     Fixed tmp(*this);
     ++(*this);
     return tmp;
 }
 
-Fixed &Fixed::operator--() // prefix
+Fixed &Fixed::operator--() 
 {
     --this->in;
     return *this;
 }
 
-Fixed Fixed::operator--(int) // postfix
+Fixed Fixed::operator--(int) 
 {
     Fixed tmp(*this);
     --(*this);
@@ -144,7 +141,6 @@ int Fixed::toInt(void) const
     return this->in >> fract;
 }
 
-// stream operator
 std::ostream &operator<<(std::ostream &os, const Fixed &f)
 {
     os << f.toFloat();

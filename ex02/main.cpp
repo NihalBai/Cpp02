@@ -6,13 +6,11 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 09:36:23 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/11/05 18:50:09 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:31:46 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
-#include <cassert>
 
 int main()
 {

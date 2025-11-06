@@ -6,7 +6,7 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 09:55:23 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/11/04 10:12:08 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:44:03 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <cmath>
+
 
 class Fixed
 {
@@ -32,8 +33,7 @@ public:
     float toFloat( void ) const;
     int toInt( void ) const;
 
-    friend std::ostream &operator<<(std::ostream &os, const Fixed &f);
 };
 
-
+std::ostream &operator<<(std::ostream &os, const Fixed &f);
 #endif

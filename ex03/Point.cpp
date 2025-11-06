@@ -6,7 +6,7 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:02:25 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/11/04 10:16:42 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/06 11:30:10 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Point ::~Point(){}
 
 Point &Point::operator=(Point const &other)
 {
-	(void)other; // x and y are const — assignment is a no-op
+	(void)other;
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: nbaidaou <nbaidaou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 11:20:19 by nbaidaou          #+#    #+#             */
-/*   Updated: 2025/10/25 13:59:15 by nbaidaou         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:07:48 by nbaidaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,13 @@ Fixed::~Fixed()
     std::cout << "Destructor called\n";
 }
 
-Fixed ::Fixed(const Fixed &f){
+// Fixed ::Fixed(const Fixed &f){
+//     std::cout << "Copy constructor called\n";
+//    *this = f;
+// }
+
+Fixed::Fixed(const Fixed &f) : in(f.in) {
     std::cout << "Copy constructor called\n";
-   *this = f;
 }
 
 Fixed &Fixed::operator=(const Fixed &f){
